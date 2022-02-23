@@ -16,12 +16,21 @@ export class UserService {
     constructor(private httpClient: HttpClient) { }
 
     fetchUserInfo() {
-       this.httpClient.get(`${ASSET_URL}/${environment.currentUser}.json`).subscribe((user) => {
-        this.userInfo.next(user as UserInfoType);
+        let currentUser = localStorage.getItem('user');
+        if(!currentUser) {
+            localStorage.setItem('user', environment.currentUser);
+            currentUser = environment.currentUser;
+        }
+       this.httpClient.get(`${ASSET_URL}/${currentUser}.json`).subscribe((data: any) => {
+        this.userInfo.next(data?.people?.reviewerInfo as UserInfoType);
        })
     }
 
     getUserInfo() {
         return this.userInfo;
+    }
+
+    getContigentsList() {
+        return this.userInfo.value?.contigents || [];
     }
 }

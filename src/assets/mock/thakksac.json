@@ -1,6 +1,40 @@
 {
-    "name": "Sachin Thkkar",
-    "loginID": "thakksac",
-    "image": "/assets/images/thakksac.png"
-        
+    "fwdSuccess":true,
+    "isAdmin": true,
+    "people": {
+        "contigentsSize": 3,
+        "reviewerInfo": {
+            "departmentDesc":"DIGITAL BUSINESS AUTOMATION",
+            "superDivisionDesc": "Technology",
+            "photoURL": "/assets/images/thakksac.png",
+            "fullName": "Sachin Thakkar",
+            "userID": "thakksac",
+            "title": "Vice President",
+            "employeeIDNumber": "90MPG",
+            "contigents": [
+                {
+                    "divisionDesc":"WM Technology",
+                    "userID": "bashaasi",
+                    "fullName": "Asif Basha",
+                    "reviewstatus": "Pending",
+                    "reviewdOn": "1/12/2022, 2:54:30 PM"  
+                },
+                {
+                    "divisionDesc":"WM Technology",
+                    "userID": "bashaasi",
+                    "fullName": "Balaji Sunder",
+                    "reviewstatus": "Pending",
+                    "reviewdOn": "1/12/2022, 2:54:30 PM" 
+                },
+                {
+                    "divisionDesc":"WM Technology",
+                    "userID": "ravikkar",
+                    "fullName": "Karunakar Ravikanti",
+                    "reviewstatus": "Pending",
+                    "reviewdOn": "1/12/2022, 2:54:30 PM" 
+                }
+            ]
+        }
+    }
+
 }

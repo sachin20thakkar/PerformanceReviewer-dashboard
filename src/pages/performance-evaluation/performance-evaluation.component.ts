@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Contigent } from 'src/models/contigent.model';
+import { UserService } from 'src/services/user.service';
+import Constants from './performance-evaluation.constant';
 
 @Component({
   selector: 'app-performance-evaluation',
@@ -6,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./performance-evaluation.component.sass']
 })
 export class PerformanceEvaluationComponent implements OnInit {
-
-  constructor() { }
+  public contigentList: Array<Contigent> = [];
+  public columnDefs = Constants.COLUMN_DEFINATION;
+  constructor(public userService: UserService) { }
 
   ngOnInit(): void {
+    this.userService.getUserInfo().subscribe(user => {
+      this.contigentList = user?.contigents || [];
+    })
   }
 
 }

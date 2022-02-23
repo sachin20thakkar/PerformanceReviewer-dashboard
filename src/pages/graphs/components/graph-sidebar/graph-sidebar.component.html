@@ -1,0 +1,19 @@
+<div class="graph-sidebar" [ngClass]="{'show': showGraphContainer}"> 
+    <div class="icon-container" (click)="toggleGraphContainer()"> <i class="fa fa-cog" aria-hidden="true"></i> </div>
+    <div class="chart-lib-container">
+        <div class="chart-lib">
+            <div>Chart Library</div>
+            <div><button class="btn btn-primary"> Apply</button></div>
+        </div>
+        <div class="chart-list">
+            <div class="chart"  *ngFor="let chart of chartList">
+                <div class="chart-title">{{chart.name}} </div>
+                <!-- <object type="image/svg+xml" [data]="chart.path"> -->
+                    <!-- Your fall back here -->
+                    <img [src]="chart.path" />
+                <!-- </object> -->
+                
+            </div>
+        </div>
+    </div>
+</div>

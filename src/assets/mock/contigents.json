@@ -6,30 +6,29 @@
         "reviewerInfo": {
             "departmentDesc":"DIGITAL BUSINESS AUTOMATION",
             "superDivisionDesc": "Technology",
-            "photoURL": "/assets/images/singbhup.jpeg",
-            "fullName": "Bhupendra Singh",
-            "userID": "singbhup",
+            "fullName": "Sachin Thakkar",
+            "userID": "thakksac",
             "title": "Vice President",
-            "employeeIDNumber": "90ABC",
+            "employeeIDNumber": "90MPG",
             "contigents": [
                 {
                     "divisionDesc":"WM Technology",
-                    "userID": "devensing",
-                    "fullName": "Devendar Singh",
+                    "userID": "bashaasi",
+                    "fullName": "Asif Basha",
                     "reviewstatus": "Pending",
                     "reviewdOn": "1/12/2022, 2:54:30 PM"  
                 },
                 {
                     "divisionDesc":"WM Technology",
-                    "userID": "jinshah",
-                    "fullName": "Jinesh Shah",
+                    "userID": "bashaasi",
+                    "fullName": "Balaji Sunder",
                     "reviewstatus": "Pending",
                     "reviewdOn": "1/12/2022, 2:54:30 PM" 
                 },
                 {
                     "divisionDesc":"WM Technology",
-                    "userID": "ramkum",
-                    "fullName": "Ramesh Kumar",
+                    "userID": "ravikkar",
+                    "fullName": "Karunakar Ravikanti",
                     "reviewstatus": "Pending",
                     "reviewdOn": "1/12/2022, 2:54:30 PM" 
                 }

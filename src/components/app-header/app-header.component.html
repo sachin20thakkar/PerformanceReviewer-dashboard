@@ -4,7 +4,7 @@
         <div class="app-name">Vendor Management</div>
     </div>
     <div class="header-right" *ngIf="userInfo">
-        <div class="user-name">{{userInfo?.name}}</div>
-        <div class="image"><img [src]="userInfo?.image"/></div>
+        <div class="user-name">{{userInfo?.fullName}}</div>
+        <div class="image"><img [src]="userInfo?.photoURL"/></div>
     </div>
 </div>
