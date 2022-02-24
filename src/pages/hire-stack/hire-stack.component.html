@@ -1,8 +1,114 @@
-<p>My Resoruces</p>
-<ag-grid-angular
-class="ag-theme-alpine grid"
-[rowData]="hireList"
-[columnDefs]="columnDefs"
+<div class="grid" *ngIf="!showCandidatesScreened && !showCandidateForm">
+    <div class="grid">
+        <div class="position-title">
+            My Positions
+        </div>
+        <div class="grid">
+            <ag-grid-angular class="ag-theme-alpine grid" [rowData]="hireList" [columnDefs]="columnDefs"
+                (cellClicked)="onCellClicked($event)">
+            </ag-grid-angular>
+        </div>
+    </div>
+</div>
+<div class="grid" *ngIf="showCandidatesScreened">
+    <div class="grid">
+        <div class="position-title">
+            Candidates Screened
+        </div>
+        <div class="grid">
+            <ag-grid-angular class="ag-theme-alpine grid" [rowData]="positionList" [columnDefs]="postionColumnDefs">
+            </ag-grid-angular>
+        </div>
+    </div>
+    <div class="footer">
+        <button type="button" class="btn btn-outline-primary" style="margin-right: 5px;" (click)="onBack()">Back</button>
+        <button type="button" class="btn btn-primary" (click)="addCandidate()">Add Candidate</button>
+    </div>
+</div>
+<div *ngIf="showCandidateForm">
+    <form>
+        <div class="panel">
+            <div class="panel-title">
+                Candidate Details
+            </div>
+            <div class="panel-body">
+                <div class="row row-bottom" style="margin-top: 10px;">
+                    <div class="col-md-1">
+                        <label for="interviewee" class="form-label">Interviewee Name</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" name="intervieww" class="form-control" id="intervieww" />
+                    </div>
+                    <div class="col-md-1">
+                        <label for="vendor" class="form-label">Vendor Name</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" name="vendor" class="form-control" id="vendor" />
+                    </div>
+                    <div class="col-md-1">
+                        <label for="contactNumber" class="form-label">Contact Number</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" name="contactNumber" class="form-control" id="contactNumber" />
+                    </div>
+                </div>
+                <div class="row row-bottom">
+                    <div class="col-md-1">
+                        <label for="interviewerMsid" class="form-label">Interviewer MSID</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" name="interviewerMsid" class="form-control" id="interviewerMsid" />
+                    </div>
+                    <div class="col-md-1">
+                        <label for="interviewer" class="form-label">Interviewer Name</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" name="interviewer" class="form-control" id="interviewer" />
+                    </div>
+                    <div class="col-md-1">
+                        <label for="interviewDate" class="form-label">Interview Date</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="date" name="interviewDate" class="form-control" id="interviewDate" />
+                    </div>
+                </div>
+                <div class="row row-bottom">
+                    <div class="col-md-1">
+                        <label for="interviewerMsid" class="form-label">Outcome</label>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="selected">
+                            <label class="form-check-label" for="inlineRadio1">Selected</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="notSelected">
+                            <label class="form-check-label" for="inlineRadio2">Not Selected</label>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <label for="interviewer" class="form-label">Did join Morgan Stanley ?</label>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                value="Yes">
+                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="No">
+                            <label class="form-check-label" for="inlineRadio2">No</label>
+                        </div>
+                    </div>
+                </div>
 
->
-</ag-grid-angular>
+            </div>
+        </div>
+        <div class="footer" style="margin-top: 25px;">
+            <button type="button" class="btn btn-primary" (click)="onSubmit()">Submit</button>
+        </div>
+    </form>
+</div>

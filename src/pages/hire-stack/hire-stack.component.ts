@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { CellClickedEvent } from 'ag-grid-community';
 import { Hire } from 'src/models/hire.model';
+import { Position } from 'src/models/position.model';
 import { HireService } from 'src/services/hire.service';
 import Constants from './hire-stack.constant';
+import PositionConstnats from './hire-position.constant';
 
 @Component({
   selector: 'app-hire-stack',
@@ -10,8 +13,12 @@ import Constants from './hire-stack.constant';
 })
 export class HireStackComponent implements OnInit {
   public hireList: Array<Hire> = [];
+  public positionList: Array<Position> = [];
   public columnDefs = Constants.COLUMN_DEFINATION;
-  public defaultColDef = {width: 100}
+  public postionColumnDefs = PositionConstnats.COLUMN_DEFINATION;
+  public showCandidatesScreened = false;
+  public currentPid = "";
+  public showCandidateForm = false;
   constructor(private hireService: HireService) { }
 
   ngOnInit(): void {
@@ -32,6 +39,30 @@ export class HireStackComponent implements OnInit {
       posCostCenter: data.posCostCenter,
       posCity: data.posCity
     }
+  }
+
+  public onCellClicked(event: CellClickedEvent) {
+    console.log("Cell clicked", event.data);
+    this.currentPid = event.data.pid;   
+    this.hireService.fetchCandidatesScreened(this.currentPid).subscribe(data => {
+      this.positionList = data.postDetails;
+      this.showCandidatesScreened = true;
+    }); 
+  }
+
+  public onBack() {
+    this.showCandidatesScreened = false;
+    this.showCandidateForm = false;
+  }
+
+  public addCandidate() {
+    this.showCandidateForm = true;
+    this.showCandidatesScreened = false;
+  }
+
+  public onSubmit() {
+    this.showCandidateForm = false;
+    this.showCandidatesScreened = true;
   }
 
 }

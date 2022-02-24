@@ -28,4 +28,12 @@ export class HireService {
             return data;
            }));
     }
+
+    fetchCandidatesScreened(pid: string) {
+        return this.httpClient.get(`${ASSET_URL}/posDetails${pid}.json`).pipe(map((data: any) => {
+            //this.userInfo.next(data?.people?.reviewerInfo as UserInfoType);
+            console.log("Candidates screen data is  ",data);
+            return data;
+           }));
+    }
 }
