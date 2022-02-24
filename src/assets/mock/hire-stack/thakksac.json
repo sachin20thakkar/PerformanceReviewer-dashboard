@@ -1,0 +1,24 @@
+{
+    "hirePosData": [
+        {
+            "pTrackerId": "1",
+            "resourceId": "",
+            "resourceName": "",
+            "resourceStatus": "",
+            "posTitle": "Consultant/Off",
+            "posCity": "Mumbai",
+            "posCostCenter": "7F - DBA MUMBAI MSAS",
+            "posResourceType": "Consutant"
+        },
+        {
+            "pTrackerId": "2",
+            "resourceId": "90MPZ",
+            "resourceName": "Sachin Tendulkar",
+            "resourceStatus": "Active",
+            "posTitle": "Consultant/Off",
+            "posCity": "Mumbai",
+            "posCostCenter": "7F - DBA MUMBAI MSAS",
+            "posResourceType": "Consutant"
+        }
+    ]
+}
