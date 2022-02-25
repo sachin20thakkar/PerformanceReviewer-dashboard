@@ -8,30 +8,30 @@
             "superDivisionDesc": "Technology",
             "photoURL": "/assets/images/singbhup.jpeg",
             "fullName": "Bhupendra Singh",
-            "userID": "singbhup",
+            "userId": "singbhup",
             "title": "Vice President",
             "employeeIDNumber": "90ABC",
             "contigents": [
                 {
                     "divisionDesc":"WM Technology",
-                    "userID": "devensing",
+                    "userId": "devensing",
                     "fullName": "Devendar Singh",
-                    "reviewstatus": "Pending",
-                    "reviewdOn": "1/12/2022, 2:54:30 PM"  
+                    "reviewStatus": "Pending",
+                    "reviewedOn": "1/12/2022, 2:54:30 PM"  
                 },
                 {
                     "divisionDesc":"WM Technology",
-                    "userID": "jinshah",
+                    "userId": "jinshah",
                     "fullName": "Jinesh Shah",
-                    "reviewstatus": "Pending",
-                    "reviewdOn": "1/12/2022, 2:54:30 PM" 
+                    "reviewStatus": "Pending",
+                    "reviewedOn": "1/12/2022, 2:54:30 PM" 
                 },
                 {
                     "divisionDesc":"WM Technology",
-                    "userID": "ramkum",
+                    "userId": "ramkum",
                     "fullName": "Ramesh Kumar",
-                    "reviewstatus": "Pending",
-                    "reviewdOn": "1/12/2022, 2:54:30 PM" 
+                    "reviewStatus": "Pending",
+                    "reviewedOn": "1/12/2022, 2:54:30 PM" 
                 }
             ]
         }

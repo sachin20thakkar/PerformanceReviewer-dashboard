@@ -1,7 +1,7 @@
 export interface Contigent{
     divisionDesc:string;
-    userID: string;
+    userId: string;
     fullName: string;
-    reviewstatus: string;
-    reviewdOn: string 
+    reviewStatus: string;
+    reviewedOn: string 
 }
