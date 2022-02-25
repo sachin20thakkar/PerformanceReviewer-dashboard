@@ -1,0 +1,43 @@
+{
+    "postDetails": [
+        {
+            "ptrackerId": 1,
+            "posName": "Associate",
+            "interviewee": "Vishal Shah",
+            "interviewedById": "90MPZ",
+            "interviewedByName": "Sachin Tendulkar",
+            "outcome": "Selected",
+            "joined": "YES",
+            "mobileNumber": "1234567890",
+            "interviewedDate": "02/20/2022",
+            "vendorName": "Accenture"
+
+        },
+        {
+            "ptrackerId": 1,
+            "posName": "Associate",
+            "interviewee": "Kapil Shah",
+            "interviewedById": "90MPZ",
+            "interviewedByName": "Sachin Tendulkar",
+            "outcome": "Selected",
+            "joined": "NO",
+            "mobileNumber": "1234567890",
+            "interviewedDate": "02/20/2022",
+            "vendorName": "Accenture"
+
+        },
+        {
+            "ptrackerId": 1,
+            "posName": "Associate",
+            "interviewee": "Sujal Shah",
+            "interviewedById": "90MPZ",
+            "interviewedByName": "Sachin Tendulkar",
+            "outcome": "Not Selected",
+            "joined": "NA",
+            "mobileNumber": "1234567891",
+            "interviewedDate": "02/20/2022",
+            "vendorName": "Accenture"
+
+        }
+    ] 
+}
