@@ -11,7 +11,7 @@
             "userId": "singbhup",
             "title": "Vice President",
             "employeeIDNumber": "90ABC",
-            "contigents": [
+            "contingents": [
                 {
                     "divisionDesc":"WM Technology",
                     "userId": "devensing",
