@@ -8,6 +8,7 @@ import { ActionCell } from './components/custom-cell/action.cell/action.cell.ren
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { QuestionListSectionComponent } from './components/question-list-section/question-list-section.component';
 import { StarRatingComponent } from './components/star-rating/star-rating.component';
+import { Action } from 'rxjs/internal/scheduler/Action';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { StarRatingComponent } from './components/star-rating/star-rating.compon
     PerformanceEvaluationComponent,
     UserDetailComponent,
     QuestionListSectionComponent,
-    StarRatingComponent,    
+    StarRatingComponent,
+    ActionCell    
   ],
   imports: [
     CommonModule,

@@ -8,13 +8,14 @@ import { SECTIONS } from './question-list.constant';
   styleUrls: ['./question-list-section.component.sass']
 })
 export class QuestionListSectionComponent implements OnInit {
-  public sectionList: Section[]= SECTIONS;
+  public sectionList: Section[]= [...SECTIONS];
+  public appliedRating:any = {}
   constructor() { }
 
   ngOnInit(): void {
   }
 
   applyRatingToQuestion(rating:number, question?:any) {
-    question.rating = rating;
+    this.appliedRating[question.id]=rating;
   }
 }

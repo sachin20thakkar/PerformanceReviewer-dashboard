@@ -28,7 +28,7 @@ export class ActionCell implements ICellRendererAngularComp {
     }
    }
    buttonClicked(content:unknown) {
-    this.modalService.open(content, { size: 'xl' });
+    this.modalService.open(content, { size: 'xl', scrollable:true });
    }
 
 }

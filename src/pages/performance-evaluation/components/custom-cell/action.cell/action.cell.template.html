@@ -8,9 +8,22 @@
       <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
     <div class="modal-body">
-        
+        <app-question-list-section></app-question-list-section>
+        <div>
+            <div class="section">
+                <div class="section-title">Feedback</div>
+                <div><textarea></textarea></div>
+            </div>
+            <div class="section">
+                <div class="section-title">Comment</div>
+                <div><textarea></textarea></div>
+            </div>
+        </div>
+       
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Save Draft</button>
+        <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+        <button type="button" class="btn btn-primary" (click)="modal.close('Close click')">Submit</button>
     </div>
   </ng-template>

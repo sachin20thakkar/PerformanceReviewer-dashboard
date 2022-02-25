@@ -1,6 +1,6 @@
 <div class="graph-sidebar" [ngClass]="{'show': showGraphContainer}"> 
     <div class="icon-container" (click)="toggleGraphContainer()"> <i class="fa fa-cog" aria-hidden="true"></i> </div>
-    <div class="chart-lib-container">
+    <div class="chart-lib-container" [ngClass]="{'hideLib': !showGraphContainer}">
         <div class="chart-lib">
             <div>Chart Library</div>
             <div><button class="btn btn-primary"> Apply</button></div>
