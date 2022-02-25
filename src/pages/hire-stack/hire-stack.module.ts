@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HireStackComponent } from './hire-stack.component';
 import { HireStackRoutingModule } from './hire-stack-routing.module';
 import { AgGridModule } from 'ag-grid-angular';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +14,8 @@ import { AgGridModule } from 'ag-grid-angular';
   imports: [
     CommonModule,
     HireStackRoutingModule,
-    AgGridModule
+    AgGridModule,
+    FormsModule
 
   ]
 })

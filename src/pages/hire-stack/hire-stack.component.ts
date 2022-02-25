@@ -16,10 +16,14 @@ export class HireStackComponent implements OnInit {
   public positionList: Array<Position> = [];
   public columnDefs = Constants.COLUMN_DEFINATION;
   public postionColumnDefs = PositionConstnats.COLUMN_DEFINATION;
+  public candidate: Position;
+  public test: string = "";
   public showCandidatesScreened = false;
   public currentPid = "";
   public showCandidateForm = false;
-  constructor(private hireService: HireService) { }
+  constructor(private hireService: HireService) {
+    this.candidate = {};
+   }
 
   ngOnInit(): void {
     this.hireService.fetchHireInfo().subscribe((data) => {
@@ -58,11 +62,14 @@ export class HireStackComponent implements OnInit {
   public addCandidate() {
     this.showCandidateForm = true;
     this.showCandidatesScreened = false;
+    this.candidate = {posName: "Associate", ptrackerId: this.currentPid};
   }
 
   public onSubmit() {
     this.showCandidateForm = false;
     this.showCandidatesScreened = true;
+    console.log(this.candidate);
+    this.positionList.push(this.candidate);    
   }
 
 }
