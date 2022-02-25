@@ -1,0 +1,15 @@
+<div>
+    <div class="section" *ngFor="let section of sectionList">
+        <div class="section-title">{{section.title}}</div>
+        <div class="question" *ngFor="let question of section.questionList" >
+            <div class="question-container">
+                <div class="question-desc col-sm-8">
+                    {{question.desc}}
+                </div>
+                <div class="rating col-sm-4">
+                    <app-star-rating [rating]="question.rating || 0" (applyRating)="applyRatingToQuestion($event, question)"></app-star-rating>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

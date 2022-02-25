@@ -13,13 +13,17 @@ export class GraphSidebarComponent implements OnInit {
   constructor(private chartService: ChartService) { }
 
   ngOnInit(): void {
+    
     this.chartService.fetchChartList().subscribe(chartlist => {
       this.chartList = chartlist as Array<any>;
     })
   }
-  addToList() {
+  // addToList(chart) {
+  //   const index = this.applyToChartList.includes(chart.id)
+  //   if() {
 
-  }
+  //   }
+  // }
   toggleGraphContainer() {
     this.showGraphContainer= !this.showGraphContainer;
   }
