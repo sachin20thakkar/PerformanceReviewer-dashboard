@@ -1,8 +1,11 @@
 export interface Hire {
-    pid: string,
-    resource: string,
+    trackerId: string,
+    resourceId: string,
+    resourceName: string,
     resourceStatus: string,
-    posTitle: string,
-    posCostCenter: string,
-    posCity: string
+    title: string,
+    costCentre: string,
+    city: string,
+    positionType: string,
+    resource: string
 }
