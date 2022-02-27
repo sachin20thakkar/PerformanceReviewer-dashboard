@@ -11,27 +11,27 @@
             "userID": "thakksac",
             "title": "Vice President",
             "employeeIDNumber": "90MPG",
-            "contigents": [
+            "contingents": [
                 {
                     "divisionDesc":"WM Technology",
-                    "userID": "bashaasi",
+                    "userId": "bashaasi",
                     "fullName": "Asif Basha",
-                    "reviewstatus": "Pending",
-                    "reviewdOn": "1/12/2022, 2:54:30 PM"  
+                    "reviewStatus": "Pending",
+                    "reviewedOn": "1/12/2022, 2:54:30 PM"  
                 },
                 {
                     "divisionDesc":"WM Technology",
-                    "userID": "bashaasi",
+                    "userId": "bashaasi",
                     "fullName": "Balaji Sunder",
-                    "reviewstatus": "Pending",
-                    "reviewdOn": "1/12/2022, 2:54:30 PM" 
+                    "reviewStatus": "Pending",
+                    "reviewedOn": "1/12/2022, 2:54:30 PM" 
                 },
                 {
                     "divisionDesc":"WM Technology",
-                    "userID": "ravikkar",
+                    "userId": "ravikkar",
                     "fullName": "Karunakar Ravikanti",
-                    "reviewstatus": "Pending",
-                    "reviewdOn": "1/12/2022, 2:54:30 PM" 
+                    "reviewStatus": "Pending",
+                    "reviewedOn": "1/12/2022, 2:54:30 PM" 
                 }
             ]
         }

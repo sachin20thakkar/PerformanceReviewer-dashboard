@@ -27,8 +27,8 @@ export class HireStackComponent implements OnInit {
 
   ngOnInit(): void {
     this.hireService.fetchHireInfo().subscribe((data) => {
-      console.log(data.hirePosData);
-      this.hireList = data.hirePosData.map(this.maptoHireList);
+      console.log(data.positionDetails);
+      this.hireList = data.positionDetails.map(this.maptoHireList);
       console.log("Updated" , this.hireList);
 
     });
@@ -36,20 +36,20 @@ export class HireStackComponent implements OnInit {
 
   private maptoHireList(data: any) {
     return {
-      pid: data.pTrackerId,
+      trackerId: data.trackerId,
       resource: data.resourceName + " " + data.resourceId,
       resourceStatus: data.resourceStatus,
-      posTitle: data.posTitle,
-      posCostCenter: data.posCostCenter,
-      posCity: data.posCity
+      title: data.title,
+      costCentre: data.costCentre,
+      city: data.city
     }
   }
 
   public onCellClicked(event: CellClickedEvent) {
     console.log("Cell clicked", event.data);
-    this.currentPid = event.data.pid;   
+    this.currentPid = event.data.trackerId;   
     this.hireService.fetchCandidatesScreened(this.currentPid).subscribe(data => {
-      this.positionList = data.postDetails;
+      this.positionList = data.candidateProfiles;
       this.showCandidatesScreened = true;
     }); 
   }
@@ -62,7 +62,7 @@ export class HireStackComponent implements OnInit {
   public addCandidate() {
     this.showCandidateForm = true;
     this.showCandidatesScreened = false;
-    this.candidate = {posName: "Associate", ptrackerId: this.currentPid};
+    this.candidate = {posName: "Associate", posTrackerId: this.currentPid};
   }
 
   public onSubmit() {

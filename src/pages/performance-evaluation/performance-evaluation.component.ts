@@ -18,7 +18,7 @@ export class PerformanceEvaluationComponent implements OnInit {
   };
   ngOnInit(): void {
     this.userService.getUserInfo().subscribe(user => {
-      this.contigentList = user?.contigents || [];
+      this.contigentList = user?.contingents || [];
     })
   }
 

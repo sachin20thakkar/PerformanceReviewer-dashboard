@@ -37,19 +37,19 @@
                         <label for="interviewee" class="form-label">Interviewee Name</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="text" name="intervieww" class="form-control" id="intervieww" [(ngModel)]="candidate.interviewee"/>
+                        <input type="text" name="intervieww" class="form-control" id="intervieww" [(ngModel)]="candidate.candidateName"/>
                     </div>
                     <div class="col-md-1">
                         <label for="vendor" class="form-label">Vendor Name</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="text" name="vendor" class="form-control" id="vendor" [(ngModel)]="candidate.vendorName"/>
+                        <input type="text" name="vendor" class="form-control" id="vendor" [(ngModel)]="candidate.vendor"/>
                     </div>
                     <div class="col-md-1">
                         <label for="contactNumber" class="form-label">Contact Number</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="text" name="contactNumber" class="form-control" id="contactNumber" [(ngModel)]="candidate.mobileNumber"/>
+                        <input type="text" name="contactNumber" class="form-control" id="contactNumber" [(ngModel)]="candidate.contactNum"/>
                     </div>
                 </div>
                 <div class="row row-bottom">
@@ -57,13 +57,13 @@
                         <label for="interviewerMsid" class="form-label">Interviewer MSID</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="text" name="interviewerMsid" class="form-control" id="interviewerMsid" [(ngModel)]="candidate.interviewedById"/>
+                        <input type="text" name="interviewerMsid" class="form-control" id="interviewerMsid" [(ngModel)]="candidate.interviewerId"/>
                     </div>
                     <div class="col-md-1">
                         <label for="interviewer" class="form-label">Interviewer Name</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="text" name="interviewer" class="form-control" id="interviewer" [(ngModel)]="candidate.interviewedByName"/>
+                        <input type="text" name="interviewer" class="form-control" id="interviewer" [(ngModel)]="candidate.interviewerName"/>
                     </div>
                     <div class="col-md-1">
                         <label for="interviewDate" class="form-label">Interview Date</label>

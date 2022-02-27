@@ -11,5 +11,5 @@ export interface UserInfo{
     userID: string;
     title: string;
     employeeIDNumber: string;
-    contigents: Contigent[];
+    contingents: Contigent[];
 }

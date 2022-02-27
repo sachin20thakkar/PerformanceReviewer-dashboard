@@ -12,18 +12,20 @@ export type UserInfoType = UserInfo | null;
     }
 )
 export class UserService {
-    private userInfo: BehaviorSubject<UserInfoType>= new BehaviorSubject<UserInfoType>(null);
+    private userInfo: BehaviorSubject<UserInfoType> = new BehaviorSubject<UserInfoType>(null);
     constructor(private httpClient: HttpClient) { }
 
     fetchUserInfo() {
         let currentUser = localStorage.getItem('user');
-        if(!currentUser) {
+        if (!currentUser) {
             localStorage.setItem('user', environment.currentUser);
             currentUser = environment.currentUser;
         }
-       this.httpClient.get(`${ASSET_URL}/${currentUser}.json`).subscribe((data: any) => {
-        this.userInfo.next(data?.people?.reviewerInfo as UserInfoType);
-       })
+        //const url = `http://localhost:8080/rest/reviewer/getContingents/${currentUser}`;
+        const url = `${ASSET_URL}/${currentUser}.json`;
+        this.httpClient.get(url).subscribe((data: any) => {
+            this.userInfo.next(data?.people?.reviewerInfo as UserInfoType);
+        })
     }
 
     getUserInfo() {
@@ -31,6 +33,6 @@ export class UserService {
     }
 
     getContigentsList() {
-        return this.userInfo.value?.contigents || [];
+        return this.userInfo.value?.contingents || [];
     }
 }

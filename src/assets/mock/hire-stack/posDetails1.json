@@ -1,42 +1,42 @@
 {
-    "postDetails": [
+    "candidateProfiles": [
         {
-            "ptrackerId": 1,
+            "posTrackerId": 1,
             "posName": "Associate",
-            "interviewee": "Vishal Shah",
-            "interviewedById": "90MPZ",
-            "interviewedByName": "Sachin Tendulkar",
+            "candidateName": "Vishal Shah",
+            "interviewerId": "90MPZ",
+            "interviewerName": "Sachin Tendulkar",
             "outcome": "Selected",
             "joined": "YES",
-            "mobileNumber": "1234567890",
+            "contactNum": "1234567890",
             "interviewedDate": "02/20/2022",
-            "vendorName": "Accenture"
+            "vendor": "Accenture"
 
         },
         {
-            "ptrackerId": 1,
+            "posTrackerId": 1,
             "posName": "Associate",
-            "interviewee": "Kapil Shah",
-            "interviewedById": "90MPZ",
-            "interviewedByName": "Sachin Tendulkar",
+            "candidateName": "Kapil Shah",
+            "interviewerId": "90MPZ",
+            "interviewerName": "Sachin Tendulkar",
             "outcome": "Selected",
             "joined": "NO",
-            "mobileNumber": "1234567890",
+            "contactNum": "1234567890",
             "interviewedDate": "02/20/2022",
-            "vendorName": "Accenture"
+            "vendor": "Accenture"
 
         },
         {
-            "ptrackerId": 1,
+            "posTrackerId": 1,
             "posName": "Associate",
-            "interviewee": "Sujal Shah",
-            "interviewedById": "90MPZ",
-            "interviewedByName": "Sachin Tendulkar",
+            "candidateName": "Sujal Shah",
+            "interviewerId": "90MPZ",
+            "interviewerName": "Sachin Tendulkar",
             "outcome": "Not Selected",
             "joined": "NA",
-            "mobileNumber": "1234567891",
+            "contactNum": "1234567891",
             "interviewedDate": "02/20/2022",
-            "vendorName": "Accenture"
+            "vendor": "Accenture"
 
         }
     ] 
