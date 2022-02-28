@@ -23,19 +23,42 @@ export class ActionCell implements ICellRendererAngularComp {
    agInit(params: ICellRendererParams): void {
     this.setButton(params)
    }
+
    refresh(params: ICellRendererParams): boolean {
     this.setButton(params);
     return true;
    }
+
    setButton(params: ICellRendererParams) {
        this.userInfo = params.data;
     if(params.data.reviewStatus === RECORD_STATE.Pending) {
         this.button = BUTTON_NAME.Edit;
     }
    }
+
+   updateStatus(details: any) {
+      this.userPEReport.details = details;
+   }
+
+   performSave() {
+      const payload = {...this.userPEReport, "consultantMSID": this.userInfo.userId,
+      "vendor": this.userInfo.vendor, "techFamily": this.userInfo.techFamily}
+      this.contigentService.saveDraft(this.userPEReport).subscribe(() => {
+         this.modalService.dismissAll();
+      })
+   }
+
+   performSubmit() {
+      const payload = {...this.userPEReport, "consultantMSID": this.userInfo.userId,
+      "vendor": this.userInfo.vendor, "techFamily": this.userInfo.techFamily}
+      this.contigentService.submitForm(this.userPEReport).subscribe(() => {
+         this.modalService.dismissAll();
+      })
+   }
+
    buttonClicked(content:unknown) {
    this.loaderService.setLoader(true);
-   this.contigentService.getContigentPE(this.userInfo.userID).subscribe((response) => {
+   this.contigentService.getContigentPE(this.userInfo.userId).subscribe((response) => {
       this.loaderService.setLoader(false);
       this.userPEReport = response;
       this.modalService.open(content, { size: 'xl', scrollable:true });
