@@ -1,0 +1,35 @@
+{
+    "consultantMSID": "bashaasi",
+    "vendor": "TCS",
+    "details": {
+        "collaborationKT": {
+            "collaboration":3,
+            "mentoring": 4,
+            "promotingTeamProductivity":3,
+            "resourceManagement": 3
+        },
+        "problemSolving": {
+            "managinRoadBlocks":2,
+            "challengeStatusQuo": 3,
+            "creativityInnovation":4
+        },
+        "processAdherence": {
+            "processCompliance": 2,
+            "promptEscalations": 3,
+            "responsivenessOnProductionIssue": 4
+        }, 
+        "solutionDelivery" : {
+            "understandingBusiness": 2,
+            "designSolution": 2,
+            "deliveryTime": 3,
+            "deliveryQuality": 4
+        }, 
+        "technicalProficiency": {
+            "skillSet": 3,
+            "domainKnowledge": 4
+        }
+    },
+    "feedback": "test",
+    "techFamily": "Java",
+    "lastUpdatedDate": ""
+}

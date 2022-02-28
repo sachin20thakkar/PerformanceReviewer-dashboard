@@ -13,6 +13,8 @@
             "contigents": [
                 {
                     "divisionDesc":"WM Technology",
+                    "techFamily": "Java",
+                    "vendor": "TCS",
                     "userID": "bashaasi",
                     "fullName": "Asif Basha",
                     "reviewstatus": "Pending",
@@ -22,13 +24,17 @@
                     "divisionDesc":"WM Technology",
                     "userID": "bashaasi",
                     "fullName": "Balaji Sunder",
-                    "reviewstatus": "Pending",
+                    "techFamily": "UI",
+                    "vendor": "Tech Mahindra",
+                    "reviewstatus": "Completed",
                     "reviewdOn": "1/12/2022, 2:54:30 PM" 
                 },
                 {
                     "divisionDesc":"WM Technology",
                     "userID": "ravikkar",
                     "fullName": "Karunakar Ravikanti",
+                    "techFamily": "UI",
+                    "vendor": "Tech Mahindra",
                     "reviewstatus": "Pending",
                     "reviewdOn": "1/12/2022, 2:54:30 PM" 
                 }

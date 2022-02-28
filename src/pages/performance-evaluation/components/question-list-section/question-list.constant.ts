@@ -3,13 +3,14 @@ import { Section } from "src/models/section.model";
 export const SECTIONS: Section[] = [
     {
         title: 'Technical Proficiency',
+        id:"technicalProficiency",
         questionList: [
             {
-                id:1,
+                id:"skillSet",
                 desc:"Skillsets required for the job",
             },
             {
-                id:2,
+                id:"domainKnowledge",
                 desc:"Domain Knowledge required for the job",
             }
 
@@ -17,21 +18,22 @@ export const SECTIONS: Section[] = [
     },
     {
         title: 'Solution Delivery',
+        id:"solutionDelivery",
         questionList: [
             {
-                id:3,
+                id:"understandingBusiness",
                 desc:"Understanding of the business requirements"
             },
             {
-                id:4,
+                id:"designSolution",
                 desc:"Designing Solutions",
             },
             {
-                id:5,
+                id:"deliveryTime",
                 desc:"Solution Deliver Timeline",
             },
             {
-                id:6,
+                id:"deliveryQuality",
                 desc:"Solution Deliver Quality",
             }
 
@@ -39,17 +41,18 @@ export const SECTIONS: Section[] = [
     },
     {
         title: 'Problem Solving',
+        id: "problemSolving",
         questionList: [
             {
-                id:7,
+                id: "managinRoadBlocks",
                 desc:"Managing Road Blocks"
             },
             {
-                id:8,
+                id:"challengeStatusQuo",
                 desc:"Creativity and Innovation",
             },
             {
-                id:9,
+                id:"creativityInnovation",
                 desc:"Challenges Status- quo",
             }
 
@@ -57,21 +60,22 @@ export const SECTIONS: Section[] = [
     },
     {
         title: 'Team Collaboration and Knowledge Sharing',
+        id: "collaborationKT",
         questionList: [
             {
-                id:10,
+                id:"collaboration",
                 desc:"Intra and Inter Team Collaboration",
             },
             {
-                id:11,
+                id:"mentoring",
                 desc:"Mentoring",
             },
             {
-                id:12,
+                id:"teamProductivity",//
                 desc:"Promotes Team Productivity",
             },
             {
-                id:13,
+                id:"resourceManagement", //
                 desc:"Resource Management",
             }
 
@@ -79,17 +83,18 @@ export const SECTIONS: Section[] = [
     },
     {
         title: 'Process Adherence',
+        id: "processAdherence",
         questionList: [
             {
-                id:14,
+                id:"processCompliance",
                 desc:"Process Compliance",
             },
             {
-                id:15,
+                id:"promptEscalations",
                 desc:"Prompt escalations to stakeholder",
             },
             {
-                id:16,
+                id:"responsivenessOnProductionIssue",
                 desc:"Responsive to production issues",
             }
 

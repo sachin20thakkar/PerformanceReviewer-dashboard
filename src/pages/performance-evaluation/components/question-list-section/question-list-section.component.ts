@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Section } from 'src/models/section.model';
 import { SECTIONS } from './question-list.constant';
 
@@ -9,13 +9,22 @@ import { SECTIONS } from './question-list.constant';
 })
 export class QuestionListSectionComponent implements OnInit {
   public sectionList: Section[]= [...SECTIONS];
-  public appliedRating:any = {}
+  @Input() appliedRating:any = {};
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  applyRatingToQuestion(rating:number, question?:any) {
-    this.appliedRating[question.id]=rating;
+  applyRatingToQuestion(rating:number, question?:any, sectionID?:string) {
+    if(sectionID) {
+      this.appliedRating[sectionID][question.id]=rating;
+    }   
+  }
+
+  getRating(sectionId:string, questionId:string) {
+    if(this.appliedRating[sectionId]) {
+      return this.appliedRating[sectionId][questionId] || 0
+    }
+    return 0
   }
 }

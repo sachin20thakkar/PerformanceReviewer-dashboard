@@ -12,11 +12,15 @@ export type UserInfoType = UserInfo | null;
         providedIn: 'root'
     }
 )
-export class ContigentService {
-    private contigentList: BehaviorSubject<Contigent[]>= new BehaviorSubject<Contigent[]>([]);
+export class LoaderService {
+    private showLoaderSubject: BehaviorSubject<boolean>= new BehaviorSubject<boolean>(false);
     constructor(private httpClient: HttpClient) { }
 
-    getContigentPE(userId: string) {
-        return this.httpClient.get(`${ASSET_URL}/questions-list/${userId}.json`);
+    setLoader(value: boolean) {
+       this.showLoaderSubject.next(value);
+    }
+
+    get loader() {
+       return  this.showLoaderSubject.asObservable()
     }
 }

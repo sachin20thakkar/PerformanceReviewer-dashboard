@@ -3,5 +3,7 @@ export interface Contigent{
     userID: string;
     fullName: string;
     reviewstatus: string;
-    reviewdOn: string 
+    reviewdOn: string;
+    vendor: string;
+    techFamily: string;
 }

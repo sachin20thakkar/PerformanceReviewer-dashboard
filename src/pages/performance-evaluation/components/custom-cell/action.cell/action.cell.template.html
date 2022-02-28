@@ -8,15 +8,15 @@
       <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
     </div>
     <div class="modal-body">
-        <app-question-list-section></app-question-list-section>
+        <app-question-list-section [appliedRating]="userPEReport.details || {}"></app-question-list-section>
         <div>
             <div class="section">
                 <div class="section-title">Feedback</div>
-                <div><textarea></textarea></div>
+                <div><textarea [value]="userPEReport.feedback || ''"></textarea></div>
             </div>
             <div class="section">
                 <div class="section-title">Comment</div>
-                <div><textarea></textarea></div>
+                <div><textarea [value]="userPEReport.comment || ''"></textarea></div>
             </div>
         </div>
        

@@ -2,6 +2,8 @@ import {Component} from "@angular/core";
 import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
 import { ICellRendererAngularComp } from "ag-grid-angular";
 import { ICellRendererParams } from "ag-grid-community";
+import { ContigentService } from "src/services/contigent.service";
+import { LoaderService } from "src/services/loader.service";
 import { BUTTON_NAME, RECORD_STATE } from "./action.cell.constant";
 
 @Component({
@@ -11,8 +13,12 @@ import { BUTTON_NAME, RECORD_STATE } from "./action.cell.constant";
 })
 export class ActionCell implements ICellRendererAngularComp {
    public button: BUTTON_NAME = BUTTON_NAME.View;
+   public userPEReport: any = {};
    public userInfo:any={};
-    constructor(private modalService: NgbModal) {}
+   showLoader: boolean = false;
+    constructor(private modalService: NgbModal,
+      private contigentService: ContigentService,
+      private loaderService: LoaderService) {}
    // gets called once before the renderer is used
    agInit(params: ICellRendererParams): void {
     this.setButton(params)
@@ -28,7 +34,17 @@ export class ActionCell implements ICellRendererAngularComp {
     }
    }
    buttonClicked(content:unknown) {
-    this.modalService.open(content, { size: 'xl', scrollable:true });
+   this.loaderService.setLoader(true);
+   this.contigentService.getContigentPE(this.userInfo.userID).subscribe((response) => {
+      this.loaderService.setLoader(false);
+      this.userPEReport = response;
+      this.modalService.open(content, { size: 'xl', scrollable:true });
+   }, () =>  {
+      this.loaderService.setLoader(false);
+      this.userPEReport = {details: {}};
+      this.modalService.open(content, { size: 'xl', scrollable:true });
+   })
+     
    }
 
 }

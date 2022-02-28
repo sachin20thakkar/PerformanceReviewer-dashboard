@@ -7,7 +7,7 @@
                     {{question.desc}}
                 </div>
                 <div class="rating col-sm-4">
-                    <app-star-rating [rating]="appliedRating[question.id] || 0" (applyRating)="applyRatingToQuestion($event, question)"></app-star-rating>
+                    <app-star-rating [rating]="getRating(section.id, question.id)" (applyRating)="applyRatingToQuestion($event, question, section.id)"></app-star-rating>
                 </div>
             </div>
         </div>
