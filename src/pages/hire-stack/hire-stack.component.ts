@@ -69,7 +69,11 @@ export class HireStackComponent implements OnInit {
     this.showCandidateForm = false;
     this.showCandidatesScreened = true;
     console.log(this.candidate);
-    this.positionList.push(this.candidate);    
+    this.hireService.onAddCandidate(this.candidate).subscribe((data) => {
+      console.log("Added candidate ", data);
+      this.positionList.push(data);    
+    });
+    
   }
 
 }

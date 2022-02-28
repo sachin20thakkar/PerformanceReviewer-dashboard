@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, of, tap } from 'rxjs';
+import { BehaviorSubject, map, Observable, of, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Contigent } from 'src/models/contigent.model';
 import { UserInfo } from 'src/models/user.model';
@@ -18,24 +18,37 @@ export class ContigentService {
     constructor(private httpClient: HttpClient, private userService: UserService) { }
 
     getContigentPE(userId: string) {
-        return this.httpClient.get(`${ASSET_URL}/questions-list/${userId}.json`);
+        //return this.httpClient.get(`${ASSET_URL}/questions-list/${userId}.json`);
+        const url = `http://ecstacy-demo-project.azurewebsites.net/estacy/retrieve?msID=${userId}`;
+        return this.httpClient.get(url).pipe(map((data: any) => {
+            return data;
+        }));
+
     }
 
     saveDraft(payload: any): Observable<any> {
         // return this.httpClient.post(`${ASSET_URL}/questions-list/${userId}.json`, payload).pipe(tap(() => {
         //     this.userService.fetchUserInfo()
         // }));
-        return of().pipe(tap(() => {
-            this.userService.fetchUserInfo()
-        }));;
+        // return of().pipe(tap(() => {
+        //     this.userService.fetchUserInfo()
+        // }));;
+        const url = `http://ecstacy-demo-project.azurewebsites.net/estacy/submit`;
+        return this.httpClient.post(url, payload).pipe(map((data: any) => {
+            return data;
+        }));
     }
 
     submitForm(payload: any): Observable<any> {
         // return this.httpClient.post(`${ASSET_URL}/questions-list/${userId}.json`, payload).pipe(tap(() => {
         //     this.userService.fetchUserInfo()
         // }));
-        return of().pipe(tap(() => {
-            this.userService.fetchUserInfo()
+        // return of().pipe(tap(() => {
+        //     this.userService.fetchUserInfo()
+        // }));
+        const url = `http://ecstacy-demo-project.azurewebsites.net/estacy/submit`;
+        return this.httpClient.post(url, payload).pipe(map((data: any) => {
+            return data;
         }));
     }
 }

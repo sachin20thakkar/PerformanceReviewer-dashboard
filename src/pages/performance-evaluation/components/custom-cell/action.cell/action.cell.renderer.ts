@@ -42,16 +42,18 @@ export class ActionCell implements ICellRendererAngularComp {
 
    performSave() {
       const payload = {...this.userPEReport, "consultantMSID": this.userInfo.userId,
-      "vendor": this.userInfo.vendor, "techFamily": this.userInfo.techFamily}
-      this.contigentService.saveDraft(this.userPEReport).subscribe(() => {
+      "vendor": this.userInfo.vendor, "techFamily": this.userInfo.techFamily, "status": RECORD_STATE.Pending}
+      this.contigentService.saveDraft(payload).subscribe(() => {
          this.modalService.dismissAll();
       })
    }
 
    performSubmit() {
       const payload = {...this.userPEReport, "consultantMSID": this.userInfo.userId,
-      "vendor": this.userInfo.vendor, "techFamily": this.userInfo.techFamily}
-      this.contigentService.submitForm(this.userPEReport).subscribe(() => {
+      "vendor": this.userInfo.vendor, "techFamily": this.userInfo.techFamily, "status": RECORD_STATE.Completed}
+      console.log("Form submitted ",payload);
+      
+      this.contigentService.submitForm(payload).subscribe(() => {
          this.modalService.dismissAll();
       })
    }

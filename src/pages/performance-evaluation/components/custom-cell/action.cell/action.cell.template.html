@@ -12,11 +12,11 @@
         <div>
             <div class="section">
                 <div class="section-title">Feedback</div>
-                <div><textarea [value]="userPEReport.feedback || ''"></textarea></div>
+                <div><textarea [(ngModel)]="userPEReport.feedback"></textarea></div>
             </div>
             <div class="section">
                 <div class="section-title">Comment</div>
-                <div><textarea [value]="userPEReport.comment || ''"></textarea></div>
+                <div><textarea [(ngModel)]="userPEReport.comment"></textarea></div>
             </div>
         </div>
        
