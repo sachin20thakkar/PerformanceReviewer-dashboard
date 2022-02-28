@@ -9,6 +9,7 @@ import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 import { QuestionListSectionComponent } from './components/question-list-section/question-list-section.component';
 import { StarRatingComponent } from './components/star-rating/star-rating.component';
 import { Action } from 'rxjs/internal/scheduler/Action';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { Action } from 'rxjs/internal/scheduler/Action';
     AgGridModule,
     NgbModalModule,
     AgGridModule.withComponents(),
+    FormsModule
   ],
   bootstrap: [PerformanceEvaluationComponent]
 })
