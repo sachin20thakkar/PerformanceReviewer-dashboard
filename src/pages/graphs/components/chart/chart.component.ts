@@ -1,11 +1,15 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as Highcharts from 'highcharts';
 import TechContigents from './config/tech-contigents';
+import TechRating from './config/tech-rating';
 import  VendorConginent  from './config/vendor-contigent';
+import VendorRating from './config/vendor-rating';
 
 const charts:any = {
   'vendor-conginent': VendorConginent.config,
-  'tech-contigent': TechContigents.config
+  'tech-contigent': TechContigents.config,
+  'tech-rating': TechRating.config,
+  'vendor-rating': VendorRating.config
 }
 @Component({
   selector: 'app-chart',

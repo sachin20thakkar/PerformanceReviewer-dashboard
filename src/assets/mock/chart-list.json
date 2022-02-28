@@ -1,12 +1,22 @@
 [
     {
         "id":"tech-contigent",
-        "name": "Tech VS Contigents ",
+        "name": "Tech VS Contingents ",
         "path":"assets/charts/tech-contigents.svg"
     },
     {
         "id":"vendor-conginent",
-        "name": "Vendor VS Contigents",
+        "name": "Vendor VS Contingents",
         "path":"assets/charts/vendor-contigent.svg"
+    },
+    {
+        "id":"vendor-rating",
+        "name": "Vendor VS Avg. Rating for given Tech",
+        "path":"assets/charts/vendor-rating.svg"
+    },
+    {
+        "id":"tech-rating",
+        "name": "Technology VS Avg. Rating for given Vendor",
+        "path":"assets/charts/tech-rating.svg"
     }
 ]

@@ -3,7 +3,7 @@ const config: Highcharts.Options = {
        type: 'column'
     },
     title: {
-       text: 'Tech vs Contingents'
+       text: 'Technology VS Avg. Rating for given Vendor'
     },
    
     legend : {
@@ -19,15 +19,16 @@ const config: Highcharts.Options = {
         shadow: true
      },
      xAxis:{
-       categories: ['Java', 'UI', 'Scrum', 'Support' , 'Others'], title: {
+       categories: ['Java', 'Automation', 'UI', 'Support' , 'Others'], title: {
           text: null
        } 
     },
     yAxis : {
        min: 0,
        title: {
-          text: 'No. of Resources(%)', align: 'high'
+          text: 'Avg Rating', align: 'high'
        },
+       max: 5,
        labels: {
           overflow: 'justify'
        }
@@ -49,23 +50,11 @@ const config: Highcharts.Options = {
        enabled: false
     },
     series: [{
-        name: 'Tech Mahindra',
+        name: 'Rating',
         type: 'column',
-        data: [5, 3, 4, 7, 2]
-    }, {
-        name: 'TCS',
-        type: 'column',
-        data: [2, 2, 3, 2, 1]
-    }, {
-        name: 'Infosys',
-        type: 'column',
-        data: [3, 4, 4, 2, 5]
-    },
-    {
-        name: 'Accenture',
-        type: 'column',
-        data: [3, 4, 4, 2, 5]
-    }    
+        data:[2, 3, 3.5, 4, 1.6]
+    } 
+     
 ]
  };
 
