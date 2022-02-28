@@ -1,5 +1,8 @@
 <div class="graph-container">
     <div  class="position-title">Dashboard </div>
-    <div class="chart-list"></div>
+    <div class="chart-list">
+        <app-chart [chartType]="'tech-contigent'"></app-chart>
+        <app-chart [chartType]="'vendor-conginent'"></app-chart>
+    </div>
     <app-graph-sidebar></app-graph-sidebar>
 </div>

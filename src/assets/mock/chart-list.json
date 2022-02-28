@@ -1,49 +1,12 @@
 [
     {
-        "id":1,
-        "name": "Test Lib 1",
-        "path":"assets/charts/multi-bar-chart.svg"
+        "id":"tech-contigent",
+        "name": "Tech VS Contigents ",
+        "path":"assets/charts/tech-contigents.svg"
     },
     {
-        "id":2,
-        "name": "Test Lib 2",
-        "path":"assets/charts/bar-charts.svg"
-    },
-    {
-        "id":3,
-        "name": "Test Lib 3",
-        "path":"assets/charts/multi-bar-chart.svg"
-
-    },
-    {
-        "id":4,
-        "name": "Test Lib 4",
-        "path":"assets/charts/bar-charts.svg"
-
-    },
-    {
-        "id":5,
-        "name": "Test Lib 5",
-        "path":"assets/charts/multi-bar-chart.svg"
-
-    },
-    {
-        "id":6,
-        "name": "Test Lib 6",
-        "path":"assets/charts/bar-charts.svg"
-
-    },
-    {
-        "id":7,
-        "name": "Test Lib 7",
-        "path":"assets/charts/multi-bar-chart.svg"
-
-    },
-    {
-        "id":8,
-        "name": "Test Lib 8",
-        "path":"assets/charts/bar-charts.svg"
-
+        "id":"vendor-conginent",
+        "name": "Vendor VS Contigents",
+        "path":"assets/charts/vendor-contigent.svg"
     }
-
 ]
