@@ -1,9 +1,9 @@
 export interface Contigent{
     divisionDesc:string;
-    userID: string;
+    userId: string;
     fullName: string;
-    reviewstatus: string;
-    reviewdOn: string;
     vendor: string;
     techFamily: string;
+    reviewStatus: string;
+    reviewedOn: string 
 }

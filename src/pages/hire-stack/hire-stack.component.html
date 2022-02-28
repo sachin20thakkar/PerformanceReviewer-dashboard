@@ -37,19 +37,19 @@
                         <label for="interviewee" class="form-label">Interviewee Name</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="text" name="intervieww" class="form-control" id="intervieww" />
+                        <input type="text" name="intervieww" class="form-control" id="intervieww" [(ngModel)]="candidate.candidateName"/>
                     </div>
                     <div class="col-md-1">
                         <label for="vendor" class="form-label">Vendor Name</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="text" name="vendor" class="form-control" id="vendor" />
+                        <input type="text" name="vendor" class="form-control" id="vendor" [(ngModel)]="candidate.vendor"/>
                     </div>
                     <div class="col-md-1">
                         <label for="contactNumber" class="form-label">Contact Number</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="text" name="contactNumber" class="form-control" id="contactNumber" />
+                        <input type="text" name="contactNumber" class="form-control" id="contactNumber" [(ngModel)]="candidate.contactNum"/>
                     </div>
                 </div>
                 <div class="row row-bottom">
@@ -57,19 +57,19 @@
                         <label for="interviewerMsid" class="form-label">Interviewer MSID</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="text" name="interviewerMsid" class="form-control" id="interviewerMsid" />
+                        <input type="text" name="interviewerMsid" class="form-control" id="interviewerMsid" [(ngModel)]="candidate.interviewerId"/>
                     </div>
                     <div class="col-md-1">
                         <label for="interviewer" class="form-label">Interviewer Name</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="text" name="interviewer" class="form-control" id="interviewer" />
+                        <input type="text" name="interviewer" class="form-control" id="interviewer" [(ngModel)]="candidate.interviewerName"/>
                     </div>
                     <div class="col-md-1">
                         <label for="interviewDate" class="form-label">Interview Date</label>
                     </div>
                     <div class="col-md-3">
-                        <input type="date" name="interviewDate" class="form-control" id="interviewDate" />
+                        <input type="date" name="interviewDate" class="form-control" id="interviewDate" [(ngModel)]="candidate.interviewedDate"/>
                     </div>
                 </div>
                 <div class="row row-bottom">
@@ -78,29 +78,29 @@
                     </div>
                     <div class="col-md-3">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                value="selected">
+                            <input class="form-check-input" type="radio" name="outcome" id="inlineRadio1"
+                                value="Selected" [(ngModel)]="candidate.outcome">
                             <label class="form-check-label" for="inlineRadio1">Selected</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                value="notSelected">
+                            <input class="form-check-input" type="radio" name="outcome" id="inlineRadio2"
+                                value="Not Selected" [(ngModel)]="candidate.outcome">
                             <label class="form-check-label" for="inlineRadio2">Not Selected</label>
                         </div>
                     </div>
                     <div class="col-md-1">
-                        <label for="interviewer" class="form-label">Did join Morgan Stanley ?</label>
+                        <label for="interviewer" class="form-label">Did candidate join Morgan Stanley ?</label>
                     </div>
                     <div class="col-md-3">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                value="Yes">
-                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                            <input class="form-check-input" type="radio" name="joined" id="inlineRadio3"
+                                value="YES" [(ngModel)]="candidate.joined">
+                            <label class="form-check-label" for="inlineRadio3">YES</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                value="No">
-                            <label class="form-check-label" for="inlineRadio2">No</label>
+                            <input class="form-check-input" type="radio" name="joined" id="inlineRadio4"
+                                value="NO" [(ngModel)]="candidate.joined">
+                            <label class="form-check-label" for="inlineRadio4">NO</label>
                         </div>
                     </div>
                 </div>

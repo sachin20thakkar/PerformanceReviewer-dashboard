@@ -29,7 +29,7 @@ export class ActionCell implements ICellRendererAngularComp {
    }
    setButton(params: ICellRendererParams) {
        this.userInfo = params.data;
-    if(params.data.reviewstatus === RECORD_STATE.Pending) {
+    if(params.data.reviewStatus === RECORD_STATE.Pending) {
         this.button = BUTTON_NAME.Edit;
     }
    }

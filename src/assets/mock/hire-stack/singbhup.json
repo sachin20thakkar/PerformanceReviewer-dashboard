@@ -1,24 +1,24 @@
 {
     "hirePosData": [
         {
-            "pTrackerId": "3",
+            "trackerId": "3",
             "resourceId": "",
             "resourceName": "",
             "resourceStatus": "",
-            "posTitle": "Consultant/Off",
-            "posCity": "Mumbai",
-            "posCostCenter": "7F - DBA MUMBAI MSAS",
-            "posResourceType": "Consutant"
+            "title": "Consultant/Off",
+            "city": "Mumbai",
+            "costCenter": "7F - DBA MUMBAI MSAS",
+            "positionType": "Consutant"
         },
         {
-            "pTrackerId": "4",
+            "trackerId": "4",
             "resourceId": "90MPZ",
             "resourceName": "Sachin Tendulkar",
             "resourceStatus": "Active",
-            "posTitle": "Consultant/Off",
-            "posCity": "Mumbai",
-            "posCostCenter": "7F - DBA MUMBAI MSAS",
-            "posResourceType": "Consutant"
+            "title": "Consultant/Off",
+            "city": "Mumbai",
+            "costCenter": "7F - DBA MUMBAI MSAS",
+            "positionType": "Consutant"
         }
     ]
 }

@@ -1,12 +1,12 @@
 export interface Position {
-    ptrackerId: string,
-    posName: string,
-    interviewee: string,
-    interviewedById: string,
-    interviewedByName: string,
-    outcome: string,
-    joined: string,
-    mobileNumber: string,
-    interviewedDate: string
-
+    posTrackerId?: string,
+    posName?: string,
+    candidateName?: string,
+    interviewerId?: string,
+    interviewerName?: string,
+    outcome?: string,
+    joined?: string,
+    contactNum?: string,
+    interviewedDate?: string,
+    vendor?: string
 }

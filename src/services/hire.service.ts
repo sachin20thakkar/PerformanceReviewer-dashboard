@@ -22,7 +22,9 @@ export class HireService {
             localStorage.setItem('user', environment.currentUser);
             currentUser = environment.currentUser;
         }
-        return this.httpClient.get(`${ASSET_URL}/${currentUser}.json`).pipe(map((data: any) => {
+        //const url = `http://localhost:8080/fetchAllMyPositions/${currentUser}`;
+        const url = `${ASSET_URL}/${currentUser}.json`;
+        return this.httpClient.get(url).pipe(map((data: any) => {
             //this.userInfo.next(data?.people?.reviewerInfo as UserInfoType);
             console.log("Hire data is ",data);
             return data;
@@ -30,7 +32,9 @@ export class HireService {
     }
 
     fetchCandidatesScreened(pid: string) {
-        return this.httpClient.get(`${ASSET_URL}/posDetails${pid}.json`).pipe(map((data: any) => {
+        //const url = `http://localhost:8080/fetchResumeToPosition/${pid}`;
+        const url = `${ASSET_URL}/posDetails${pid}.json`;
+        return this.httpClient.get(url).pipe(map((data: any) => {
             //this.userInfo.next(data?.people?.reviewerInfo as UserInfoType);
             console.log("Candidates screen data is  ",data);
             return data;
